@@ -5,17 +5,12 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "../shared/modules/vpc"
+  source = "app.terraform.io/hatchedlabs/vpc/aws"
+  version = "0.0.2"
 
   namespace = "${ var.namespace }"
   cidr_block = "${ var.cidr_block }"
   public_cidr_blocks = "${ var.public_cidr_blocks }"
   private_cidr_blocks = "${ var.private_cidr_blocks }"
   zones = "${ local.zones }"
-}
-
-module "iam" {
-  source = "../shared/modules/iam"
-
-  namespace = "${ var.namespace }"
 }
