@@ -37,3 +37,4 @@ variable "private_cidr_blocks" {
 
 // Outputs
 output "vpc-id" { value = "${ module.vpc.vpc-id }" }
+output "sg-id" { value = "${ aws_security_group.private-sg.id }" }
