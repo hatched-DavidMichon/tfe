@@ -4,7 +4,7 @@ terraform {
     organization = "hatchedlabs"
 
     workspaces {
-      prefix = "tool-"
+      name = "tool-frontend"
     }
   }
 }
