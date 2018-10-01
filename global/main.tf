@@ -6,7 +6,7 @@ provider "aws" {
 
 module "vpc" {
   source = "app.terraform.io/hatchedlabs/vpc/aws"
-  version = "0.0.2"
+  //version = "0.0.2"
 
   namespace = "${ var.namespace }"
   cidr_block = "${ var.cidr_block }"

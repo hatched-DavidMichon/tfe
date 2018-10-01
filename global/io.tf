@@ -34,3 +34,6 @@ variable "private_cidr_blocks" {
     zone_2 = "10.30.5.0/24"
   }
 }
+
+// Outputs
+output "namespace" { value = "${ var.namespace }" }
