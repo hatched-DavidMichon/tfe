@@ -10,4 +10,5 @@ resource "aws_security_group_rule" "sg_80" {
   to_port = 80
   protocol = "tcp"
   security_group_id = "${ data.terraform_remote_state.tool-global.sg-id }"
+  self = true
 }
