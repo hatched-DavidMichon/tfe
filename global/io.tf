@@ -36,4 +36,4 @@ variable "private_cidr_blocks" {
 }
 
 // Outputs
-output "namespace" { value = "${ var.namespace }" }
+output "vpc-id" { value = "${ module.vpc.vpc-id }" }
